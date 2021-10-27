@@ -378,7 +378,7 @@ Since this is an American dataset the temperature value is in Farenheit. But we 
 
 But - this column will simply display in the output. We have not changed anything in the data at all. But we can add new columns to our dataset by using the assignment operator, and setting a new name for the column.
 
-```{r celsius1,  exercise=TRUE}
+```{r celsius2,  exercise=TRUE}
 airquality$Temp_C <- (5/9)*(airquality$Temp-32)
 ```
 
@@ -386,7 +386,7 @@ Here the column on the left hand side `Temp_C` is being created, so we can call 
 
 However if we look at the airquality dataset we will see an extra column at the end with our new variable in it, and we could use that column in the same ways that we could use any of the other columns of data.
 
-```{r celsius1,  exercise=TRUE}
+```{r celsius3,  exercise=TRUE}
 airquality$Temp_C<-(5/9)*(airquality$Temp-32)
 
 airquality
@@ -443,7 +443,7 @@ median(airquality$Temp)
 ```
 Other functions maybe have less obvious names, but are still easy enough to remember, like `sd` for standard deviation and `length` for the number of observations.
 
-```{r sum3, exercise=TRUE}
+```{r sum4, exercise=TRUE}
 sd(airquality$Temp)
 length(airquality$Temp)
 ```
