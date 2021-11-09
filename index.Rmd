@@ -182,7 +182,7 @@ Now we have just made things worse for ourselves if we want to do any calculatio
 
 ## Errors
 
-When you come across errors in your code (and you will) the first thing to do is to check carefully what you have submitted. Error messages in R can be a little bit cryptic to decipher, but they always contain some something which should lead you towards what the problem is. But it definitely requires a little bit of practice, detective work and trial and error to help negotiate. The first things to do are to check carefully for any clues in the error message - it might help point to the specific part of the code where you made a mistake.
+When you come across errors in your code (and you will) the first thing to do is to check carefully what you have submitted. Error messages in R can be a little bit cryptic to decipher, but they always contain something which should lead you towards what the problem is. But it definitely requires a little bit of practice, detective work and trial and error to help negotiate. The first things to do are to check carefully for any clues in the error message - it might help point to the specific part of the code where you made a mistake.
 
 A key one to remember is that R is case sensitive - try running this:
 
@@ -192,9 +192,9 @@ X
 ```
 We do have an object called x but we don't have anything called X. Capitalisation and spelling is vital.
 
-Common sources of errors are things like having brackets in incorrect places; spelling mistakes; misusing or misplacing quotation marks; or using the wrong case (B.S.Q.C). It's also likely you may find problems with sequencing of commands - especially making you sure you load data or packages before you need to use them. You cannot use functions from additional packages without explicitly loading these packages first in sequence. 
+Common sources of errors are things like having **b**rackets in incorrect places; **s**pelling mistakes; misusing or misplacing **q**uotation marks; or using the wrong **c**ase (B.S.Q.C). It's also likely you may find problems with sequencing of commands - especially making you sure you load data or packages before you need to use them. You cannot use functions from additional packages without explicitly loading these packages first in sequence. 
 
-Similarly we cannot use any object until after we have created it - the order in which we run code matters. For example:
+Similarly we cannot use any named object before we have created an object with that name. The order in which we run code matters. For example:
 
 ```{r ordering,  exercise=TRUE}
 x<-2+2
@@ -224,7 +224,7 @@ sqrt(x^2 +y^2)
 
 Then, if we ever need to solve the Pythagoras equation again, all we need to do is find our code, update the values of x and y - and we can get our solution instantly! 
 
-*QUESTION* Try updating the code below to solving the theorem for the hypotenuse of a triangle with two sides of length of 10 and 22
+*QUESTION* Try updating the code below, to now solve the theorem for the length of the hypotenuse of a triangle where the other two sides are of length of 10 and 22
 
 ```{r pythag, exercise=TRUE}
 x<-4
@@ -256,7 +256,7 @@ These mathematic functions are structured in the same way as every other sort of
 
 ## (c)oncatenation of values
 
-An extremely common function you will see in R is `c()`. This is a way of *c*ombining, or '*c*oncatenating', multiple items together into a single object, which is called a *vector*.  If we ever need to do any sort of operation on more than one single number, then we will need to be using vectors. So, using `c()`, we can create a vector of the test scores, separated by commas, and assign this to be the object `y`. 
+An extremely common function you will see in R is `c()`. This is a way of *c*ombining, or '*c*oncatenating', multiple items together into a single object, which is called a *vector*.  If we ever need to do any sort of operation on more than one single number, then we will need to be using vectors. So, using `c()`, we can create a vector of different numbers, separated by commas, and assign this to be the object `y`. 
 
 ```{r vector,  exercise=TRUE}
 y<-c(4,5,6,7,800)
@@ -425,7 +425,7 @@ We use the function name `summary` and then inside the brackets we tell it what 
 
 You can see that this function provides summary statistics for all of the columns in our dataset
 
-R is an 'object-oriented programming language'. This means that the same function may do slightly different things, depending on what sort of object it is applied on. We can already see this from the difference between `c(airquality)` and `c(1,2)`. We can also somewhat see this from the output of `summary(airquality)``. The `Month` column shows us frequencies for each month. This column is being treated as a categorical variable (the 'factor' class in R); the other columns provide summary statistics (mean, median, min, max and the lower and upper quartiles). because they are 'numeric' variables.
+R is an 'object-oriented programming language'. This means that the same function may do slightly different things, depending on what sort of object it is applied on. We can already see this from the difference between `c(airquality)` and `c(1,2)`. We can also somewhat see this from the output of `summary(airquality)`. The `Month` column shows us frequencies for each month. This column is being treated as a categorical variable (the 'factor' class in R); the other columns provide summary statistics (mean, median, min, max and the lower and upper quartiles). because they are 'numeric' variables.
 For example we can also run the function `summary` on just the `Temp` column, and we will see summary statistics for just this column.
 
 ```{r sum2, exercise=TRUE}
@@ -527,7 +527,7 @@ There are always worked examples along with each function, which are often more 
 ```{r example, exercise=TRUE}
 example(mean)
 ```
-But ? and ```example``` only work if you already know the name of the function!
+But `?` and `example` only work if you already know the name of the function!
 
 The help menu in R is written for a very technical perspective, and is very useful once you have become familiar with R. However, it is generally not very helpful as a learning tool for new users, as you often will not know what function you need to use and the search results can be overwhelming for simple terms. The number one resource for almost all R programmers is something you might have heard of before: Google.
 https://www.google.co.uk/search?q=How+do+I+calculate+a+mean+in+R
@@ -664,7 +664,7 @@ Using the `airquality` dataset I wanted to create a column in my data with the t
 
 ```{r ex1c, exercise=TRUE}
 
-airquality$temp-Kelvin<-(5/9)*(AirQuality$Temp-32)) + 273.15 
+airquality$temp-Kelvin<-(5/9)*(airquatily$Temp-32)) + 273.15 
 
 ```
 
